@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dev JavaScript</title>
-    </head>
-    <body>
-        <h1 id="titre"> Projets </h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="titre">Projects</h1>
 
-        <p>
-            Je suis disponible à l'URL : http://127.0.0.1:5500/Documents/B1/JavaS/index.html
-        </p>
-        <script scr="index.js"></script>
-    </body>
+<p>
+    Je suis disponible à l'url : http://127.0.0.1:5500/Documents/B1/JavaS/index.html
+</p>
+<div class="row">
+<div class="col"></div>
+<div class="col">
+<div class="container">
+<br>
+<h2>Calculatrice</h2>
+
+
+    <form action="" method="get">
+        Premier nombre <input type="number" name="a" id="a"><br><br>
+        Deuxième nombre <input type="number" name="b" id="b"><br><br>
+        <button type="button" id="add" class="button">Additionner</button>
+        <button type="button" id="sub" class="button">Soustraire</button>
+        <button type="button" id="mult" class="button">Multiplier</button>
+        <button type="button" id="div" class="button">Diviser</button>
+        <br>
+        <button type="button" id="del" class="delbutton">Effacer</button>
+        <p id="result" class="result"></p>
+    </form>
+</div>
+</div>
+<div class="col"></div>
+</div>
+
+    <script src="index.js"></script>
+</body>
 </html>

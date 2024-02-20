@@ -1,0 +1,39 @@
+.button {
+    background-color: #000000;
+    border: none;
+    color : white;
+    padding : 10px 10px;
+    text-align : center;
+    text-decoration : none;
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  .container {
+    background-color: beige;
+    border: none;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+
+  .result {
+    font-size: 20px;
+
+  }
+
+.delbutton {
+    background-color: #c00707;
+    border: none;
+    color : white;
+    padding : 10px 10px;
+    text-align : center;
+    text-decoration : none;
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
