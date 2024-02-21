@@ -36,3 +36,9 @@ document.getElementById("monBouton").addEventListener("click", function (){
 ```
 
 callback : fonction qui appelle en paramètre une autre fonction
+
+## Tableau
+### Exemple :
+```
+let fruits = ["pomme","banane","fraise"];
+```

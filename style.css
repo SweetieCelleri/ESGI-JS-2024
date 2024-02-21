@@ -11,7 +11,7 @@
     border-radius: 10px;
   }
 
-  .container {
+  .container1 {
     background-color: beige;
     border: none;
     text-align: center;
@@ -36,4 +36,39 @@
     font-size: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
+  }
+
+  .titre {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .container2 {
+    text-align: center;
+    margin: auto;
+  }
+
+  .buttonF {
+    background-color: #000000;
+    border: none;
+    color : white;
+    padding : 10px 10px;
+    text-align : center;
+    text-decoration : none;
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 100px;
+  }
+
+  .texte {
+    font-size: 20px;
+    width: 20%;
+    text-align: center;
+    margin: auto;
   }
