@@ -48,105 +48,215 @@ delButton.addEventListener("click", function(){
 
 const liste = document.getElementById("fruits");
 let basePrice = 0;
+let fruitTotal = 0;
+let pommeCount = 0;
+let poireCount = 0;
+let orangeCount = 0;
+let raisinCount = 0;
+let bananeCount = 0;
+let fraiseCount = 0;
+let framboiseCount = 0;
+let mureCount = 0;
+let groseilleCount = 0;
+let ananasCount = 0;
+let kiwiCount = 0;
+let mangueCount = 0;
 
 const pomme = document.getElementById("pomme");
 pomme.addEventListener("click", function(){
-    let newRow = liste.insertRow();
-    let newCell = newRow.insertCell();
-    newCell.innerHTML = "Pommes";
+    pommeCount++
+    if (pommeCount > 1) {
+        document.getElementById("pommecount").innerHTML = "Pommes X" + pommeCount
+        document.getElementById("tot").innerHTML = basePrice += 2
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
+    let newRow = liste.insertRow()
+    let newCell = newRow.insertCell()
+    newCell.innerHTML = `Pommes`
+    newCell.id = "pommecount"
     document.getElementById("tot").innerHTML = basePrice += 2
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const poire = document.getElementById("poire");
 poire.addEventListener("click", function(){
+    poireCount++
+    if (poireCount > 1) {
+        document.getElementById("poirecount").innerHTML = "Poires X" + poireCount
+        document.getElementById("tot").innerHTML = basePrice += 4
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Poires"
+    newCell.id = "poirecount"
     document.getElementById("tot").innerHTML = basePrice += 4
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const orange = document.getElementById("orange");
 orange.addEventListener("click", function(){
+    orangeCount++
+    if (orangeCount > 1) {
+        document.getElementById("orangecount").innerHTML = "Oranges X" + orangeCount
+        document.getElementById("tot").innerHTML = basePrice += 2
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Oranges"
+    newCell.id = "orangecount"
     document.getElementById("tot").innerHTML = basePrice += 2
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const raisin = document.getElementById("raisin");
 raisin.addEventListener("click", function(){
+    raisinCount++
+    if (raisinCount > 1) {
+        document.getElementById("raisincount").innerHTML = "Raisins X" + raisinCount
+        document.getElementById("tot").innerHTML = basePrice += 5
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Raisins"
+    newCell.id = "raisincount"
     document.getElementById("tot").innerHTML = basePrice += 5
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const banane = document.getElementById("banane");
 banane.addEventListener("click", function(){
+    bananeCount++
+    if (bananeCount > 1) {
+        document.getElementById("bananecount").innerHTML = "Bananes X" + bananeCount
+        document.getElementById("tot").innerHTML = basePrice += 4
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Bananes"
+    newCell.id = "bananecount"
     document.getElementById("tot").innerHTML = basePrice += 4
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const fraise = document.getElementById("fraise");
 fraise.addEventListener("click", function(){
+    fraiseCount++
+    if (fraiseCount > 1) {
+        document.getElementById("fraisecount").innerHTML = "Fraises X" + fraiseCount
+        document.getElementById("tot").innerHTML = basePrice += 6
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Fraises"
+    newCell.id = "fraisecount"
     document.getElementById("tot").innerHTML = basePrice += 6
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const framboise = document.getElementById("framboise");
 framboise.addEventListener("click", function(){
+    framboiseCount++
+    if (framboiseCount > 1) {
+        document.getElementById("framboisecount").innerHTML = "Framboise X" + framboiseCount
+        document.getElementById("tot").innerHTML = basePrice += 3
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
-    newCell.innerHTML = "Framboises"
+    newCell.innerHTML = "Framboise"
+    newCell.id = "framboisecount"
     document.getElementById("tot").innerHTML = basePrice += 3
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const mure = document.getElementById("mure");
 mure.addEventListener("click", function(){
+    mureCount++
+    if (mureCount > 1) {
+        document.getElementById("murecount").innerHTML = "Mûres X" + mureCount
+        document.getElementById("tot").innerHTML = basePrice += 7
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Mûres"
+    newCell.id = "murecount"
     document.getElementById("tot").innerHTML = basePrice += 7
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const groseille = document.getElementById("groseille");
 groseille.addEventListener("click", function(){
+    groseilleCount++
+    if (groseilleCount > 1) {
+        document.getElementById("groseillecount").innerHTML = "Groseilles X" + groseilleCount
+        document.getElementById("tot").innerHTML = basePrice += 6
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Groseilles"
+    newCell.id = "groseillecount"
     document.getElementById("tot").innerHTML = basePrice += 6
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const ananas = document.getElementById("ananas");
 ananas.addEventListener("click", function(){
+    ananasCount++
+    if (ananasCount > 1) {
+        document.getElementById("ananascount").innerHTML = "Ananas X" + ananasCount
+        document.getElementById("tot").innerHTML = basePrice += 10
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Ananas"
+    newCell.id = "ananascount"
     document.getElementById("tot").innerHTML = basePrice += 10
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const kiwi = document.getElementById("kiwi");
 kiwi.addEventListener("click", function(){
+    kiwiCount++
+    if (kiwiCount > 1) {
+        document.getElementById("kiwicount").innerHTML = "Kiwi X" + kiwiCount
+        document.getElementById("tot").innerHTML = basePrice += 4
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Kiwi"
+    newCell.id = "kiwicount"
     document.getElementById("tot").innerHTML = basePrice += 4
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const mangue = document.getElementById("mangue");
 mangue.addEventListener("click", function(){
+    mangueCount++
+    if (mangueCount > 1) {
+        document.getElementById("manguecount").innerHTML = "Mangues X" + mangueCount
+        document.getElementById("tot").innerHTML = basePrice += 8
+        document.getElementById("Ftot").innerHTML = fruitTotal += 1
+    }else {
     let newRow = liste.insertRow()
     let newCell = newRow.insertCell()
     newCell.innerHTML = "Mangues"
+    newCell.id = "manguecount"
     document.getElementById("tot").innerHTML = basePrice += 8
-});
+    document.getElementById("Ftot").innerHTML = fruitTotal += 1
+}});
 
 const deleteButton = document.getElementById("delete");
 deleteButton.addEventListener("click", function(){
     document.getElementById("fruits").innerHTML = ""
     document.getElementById("tot").innerHTML = basePrice = 0
+    document.getElementById("Ftot").innerHTML = fruitTotal = 0
 })
