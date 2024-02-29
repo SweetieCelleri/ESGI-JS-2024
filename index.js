@@ -260,3 +260,85 @@ deleteButton.addEventListener("click", function(){
     document.getElementById("tot").innerHTML = basePrice = 0
     document.getElementById("Ftot").innerHTML = fruitTotal = 0
 })
+
+const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer XXUj8J7K1ND5pTb9dkNW'
+    }
+  };
+
+
+   fetch('https://the-one-api.dev/v2/movie', options)
+   .then(response => response.json())
+   .then(response => console.log(response))
+   .catch(err => console.error(err));
+
+
+   const filmliste = document.getElementById("film");
+
+  const LOTR1 = document.getElementById("LOTR1")
+  LOTR1.addEventListener("click", function () {
+    fetch("https://the-one-api.dev/v2/movie", options)
+    .then((response) => response.json())
+    .then((films) => {
+        const film = films.docs[6];
+        console.log(films.docs);
+        document.getElementById("film").innerHTML = ""
+        let newRow = filmliste.insertRow()
+        let newCell = newRow.insertCell()
+        newCell.innerHTML = film.name + film.runtimeInMinutes
+
+    })
+    .catch((error) =>
+    console.error(
+    "Erreur lors de la récupération des détails du film:",
+    error
+    )
+    );
+   });
+
+
+
+   const LOTR2 = document.getElementById("LOTR2")
+  LOTR2.addEventListener("click", function () {
+    fetch("https://the-one-api.dev/v2/movie", options)
+    .then((response) => response.json())
+    .then((films) => {
+        const film = films.docs[5];
+        console.log(films.docs);
+        document.getElementById("film").innerHTML = ""
+        let newRow = filmliste.insertRow()
+        let newCell = newRow.insertCell()
+        newCell.innerHTML = film.name
+    })
+    .catch((error) =>
+    console.error(
+    "Erreur lors de la récupération des détails du film:",
+    error
+    )
+    );
+   });
+
+
+
+   const LOTR3 = document.getElementById("LOTR3")
+  LOTR3.addEventListener("click", function () {
+    fetch("https://the-one-api.dev/v2/movie", options)
+    .then((response) => response.json())
+    .then((films) => {
+        const film = films.docs[7];
+        console.log(films.docs);
+        document.getElementById("film").innerHTML = ""
+        let newRow = filmliste.insertRow()
+        let newCell = newRow.insertCell()
+        newCell.innerHTML = film.name
+    })
+    .catch((error) =>
+    console.error(
+    "Erreur lors de la récupération des détails du film:",
+    error
+    )
+    );
+   });
