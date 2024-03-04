@@ -274,7 +274,10 @@ const options = {
    .then(response => response.json())
    .then(response => console.log(response))
    .catch(err => console.error(err));
-
+   fetch('https://the-one-api.dev/v2/movie/5cd95395de30eff6ebccde5d/quote' , options)
+   .then(response => response.json())
+   .then(response => console.log(response))
+   .catch(err => console.error(err));
 
    const filmliste = document.getElementById("film");
 
@@ -283,12 +286,12 @@ const options = {
     fetch("https://the-one-api.dev/v2/movie", options)
     .then((response) => response.json())
     .then((films) => {
+        document.getElementById("film").innerHTML = ""
         const film = films.docs[6];
         console.log(films.docs);
-        document.getElementById("film").innerHTML = ""
         let newRow = filmliste.insertRow()
         let newCell = newRow.insertCell()
-        newCell.innerHTML = film.name + film.runtimeInMinutes
+        newCell.innerHTML = film.name
 
     })
     .catch((error) =>
@@ -298,6 +301,25 @@ const options = {
     )
     );
    });
+   LOTR1.addEventListener("click", function () {
+    fetch("https://the-one-api.dev/v2/movie/5cd95395de30eff6ebccde5c/quote", options)
+    .then((response) => response.json())
+    .then((films) => {
+        const quote = films.docs[0];
+        console.log(films.docs);
+        let newRow = filmliste.insertRow()
+        let newCell = newRow.insertCell()
+        newCell.innerHTML = quote.dialog
+
+    })
+    .catch((error) =>
+    console.error(
+    "Erreur lors de la récupération des détails du film:",
+    error
+    )
+    );
+   });
+
 
 
 
@@ -342,3 +364,4 @@ const options = {
     )
     );
    });
+
