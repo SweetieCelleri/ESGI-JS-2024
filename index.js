@@ -270,98 +270,111 @@ const options = {
   };
 
 
-   fetch('https://the-one-api.dev/v2/movie', options)
-   .then(response => response.json())
-   .then(response => console.log(response))
-   .catch(err => console.error(err));
-   fetch('https://the-one-api.dev/v2/movie/5cd95395de30eff6ebccde5d/quote' , options)
-   .then(response => response.json())
-   .then(response => console.log(response))
-   .catch(err => console.error(err));
+  const livreContainer = document.getElementById("book");
 
-   const filmliste = document.getElementById("film");
-
-  const LOTR1 = document.getElementById("LOTR1")
+  const LOTR1 = document.getElementById("LOTR1");
   LOTR1.addEventListener("click", function () {
-    fetch("https://the-one-api.dev/v2/movie", options)
+  
+      fetch("https://the-one-api.dev/v2/book/5cf5805fb53e011a64671582", options)
+      .then((response) => response.json())
+      .then((livres) => {
+          livreContainer.innerHTML = "";
+          console.log(livres.docs)
+          livres.docs.forEach((livre) => {
+              let newRow = livreContainer.insertRow();
+              let newCell = newRow.insertCell();
+              newCell.innerHTML = livre.name;
+          });
+      })
+      .catch((error) => {
+          console.error("Erreur lors de la récupération des détails du livre:", error);
+      });
+  });
+  LOTR1.addEventListener("click", function () {
+    fetch("https://the-one-api.dev/v2/book/5cf5805fb53e011a64671582/chapter", options)
     .then((response) => response.json())
-    .then((films) => {
-        document.getElementById("film").innerHTML = ""
-        const film = films.docs[6];
-        console.log(films.docs);
-        let newRow = filmliste.insertRow()
-        let newCell = newRow.insertCell()
-        newCell.innerHTML = film.name
-
+    .then((livres) => {
+        const chapters = livres.docs;
+        console.log(livres.docs);
+        chapters.forEach((chapter) => {
+            let newRow = livreContainer.insertRow();
+            let newCell = newRow.insertCell();
+            newCell.innerHTML = chapter.chapterName;
+        });
     })
-    .catch((error) =>
-    console.error(
-    "Erreur lors de la récupération des détails du film:",
-    error
-    )
-    );
-   });
-   LOTR1.addEventListener("click", function () {
-    fetch("https://the-one-api.dev/v2/movie/5cd95395de30eff6ebccde5c/quote", options)
-    .then((response) => response.json())
-    .then((films) => {
-        const quote = films.docs[0];
-        console.log(films.docs);
-        let newRow = filmliste.insertRow()
-        let newCell = newRow.insertCell()
-        newCell.innerHTML = quote.dialog
-
-    })
-    .catch((error) =>
-    console.error(
-    "Erreur lors de la récupération des détails du film:",
-    error
-    )
-    );
-   });
+    .catch((error) => {
+        console.error("Erreur lors de la récupération des détails du chapitre:", error);
+    });
+});
 
 
 
 
    const LOTR2 = document.getElementById("LOTR2")
   LOTR2.addEventListener("click", function () {
-    fetch("https://the-one-api.dev/v2/movie", options)
+    fetch("https://the-one-api.dev/v2/book/5cf5805fb53e011a64671582", options)
+      .then((response) => response.json())
+      .then((livres) => {
+          livreContainer.innerHTML = "";
+          livres.docs.forEach((livre) => {
+              let newRow = livreContainer.insertRow();
+              let newCell = newRow.insertCell();
+              newCell.innerHTML = livre.name;
+          });
+      })
+      .catch((error) => {
+          console.error("Erreur lors de la récupération des détails du livre:", error);
+      });
+  });
+  LOTR2.addEventListener("click", function () {
+    fetch("https://the-one-api.dev/v2/book/5cf5805fb53e011a64671582/chapter", options)
     .then((response) => response.json())
-    .then((films) => {
-        const film = films.docs[5];
-        console.log(films.docs);
-        document.getElementById("film").innerHTML = ""
-        let newRow = filmliste.insertRow()
-        let newCell = newRow.insertCell()
-        newCell.innerHTML = film.name
+    .then((livres) => {
+        const chapters = livres.docs;
+        console.log(livres.docs);
+        chapters.forEach((chapter) => {
+            let newRow = livreContainer.insertRow();
+            let newCell = newRow.insertCell();
+            newCell.innerHTML = chapter.chapterName;
+        });
     })
-    .catch((error) =>
-    console.error(
-    "Erreur lors de la récupération des détails du film:",
-    error
-    )
-    );
-   });
+    .catch((error) => {
+        console.error("Erreur lors de la récupération des détails du chapitre:", error);
+    });
+});
 
 
 
    const LOTR3 = document.getElementById("LOTR3")
   LOTR3.addEventListener("click", function () {
-    fetch("https://the-one-api.dev/v2/movie", options)
+    fetch("https://the-one-api.dev/v2/book/5cf5805fb53e011a64671582", options)
+      .then((response) => response.json())
+      .then((livres) => {
+          livreContainer.innerHTML = "";
+          livres.docs.forEach((livre) => {
+              let newRow = livreContainer.insertRow();
+              let newCell = newRow.insertCell();
+              newCell.innerHTML = livre.name;
+          });
+      })
+      .catch((error) => {
+          console.error("Erreur lors de la récupération des détails du livre:", error);
+      });
+  });
+  LOTR3.addEventListener("click", function () {
+    fetch("https://the-one-api.dev/v2/book/5cf5805fb53e011a64671582/chapter", options)
     .then((response) => response.json())
-    .then((films) => {
-        const film = films.docs[7];
-        console.log(films.docs);
-        document.getElementById("film").innerHTML = ""
-        let newRow = filmliste.insertRow()
-        let newCell = newRow.insertCell()
-        newCell.innerHTML = film.name
+    .then((livres) => {
+        const chapters = livres.docs;
+        console.log(livres.docs);
+        chapters.forEach((chapter) => {
+            let newRow = livreContainer.insertRow();
+            let newCell = newRow.insertCell();
+            newCell.innerHTML = chapter.chapterName;
+        });
     })
-    .catch((error) =>
-    console.error(
-    "Erreur lors de la récupération des détails du film:",
-    error
-    )
-    );
-   });
+    .catch((error) => {
+        console.error("Erreur lors de la récupération des détails du chapitre:", error);
+    });
+});
 
